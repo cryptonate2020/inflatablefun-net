@@ -1,0 +1,31 @@
+User-agent: *
+Allow: /
+Disallow: /thank-you.html
+
+Sitemap: https://inflatablefun.net/sitemap.xml
+
+# GEO / AI crawler visibility (real-time citation crawlers)
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+# Model-training crawlers (separate from real-time search) - client to confirm preference
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
