@@ -1,7 +1,7 @@
 /* Party Central of Kentucky — refreshed static rebuild
    Brand tokens pulled from live site computed styles:
    accent red #E02B20, band red #C9242C, heading gray #444444, footer #222222
-   Fonts: Allan (display), Amiko (section headings), Open Sans (subheads), Arimo (nav/buttons), Source Sans Pro (body)
+   Fonts: Allan (display/brand), Source Sans 3 (heading, sub, nav, body)
 */
 
 :root {
@@ -15,10 +15,10 @@
   --bg-alt: #faf7f5;
   --border: #eae3e0;
   --font-display: "Allan", Georgia, serif;
-  --font-heading: "Amiko", Helvetica, Arial, sans-serif;
-  --font-sub: "Open Sans", Helvetica, Arial, sans-serif;
-  --font-nav: "Arimo", Helvetica, Arial, sans-serif;
-  --font-body: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  --font-heading: "Source Sans 3", "Source Sans Pro", Helvetica, Arial, sans-serif;
+  --font-sub: "Source Sans 3", "Source Sans Pro", Helvetica, Arial, sans-serif;
+  --font-nav: "Source Sans 3", "Source Sans Pro", Helvetica, Arial, sans-serif;
+  --font-body: "Source Sans 3", "Source Sans Pro", Helvetica, Arial, sans-serif;
   --radius: 10px;
   --shadow: 0 2px 10px rgba(0,0,0,0.08);
   --shadow-hover: 0 8px 24px rgba(0,0,0,0.14);
@@ -212,6 +212,39 @@ p.section-sub {
 .product-info .price { color: var(--red); font-size: 24px; font-weight: 700; margin-bottom: 4px; }
 .product-info .dims { color: var(--gray-light); font-size: 15px; margin-bottom: 4px; }
 .product-info .note { color: var(--gray-light); font-size: 14px; margin-bottom: 20px; }
+
+.product-info .intro {
+  font-size: 16px; color: var(--gray); margin: 0 0 16px; line-height: 1.55; max-width: 36em;
+}
+.product-specs {
+  list-style: none; padding: 0; margin: 0 0 18px;
+  border: 1px solid var(--border); border-radius: var(--radius);
+  background: var(--bg-alt);
+}
+.product-specs li {
+  padding: 10px 14px; border-bottom: 1px solid var(--border); font-size: 15px; color: var(--gray);
+}
+.product-specs li:last-child { border-bottom: none; }
+.product-specs strong { color: var(--gray); font-weight: 700; margin-right: 4px; }
+.product-includes {
+  margin: 0 0 18px; padding: 16px 18px; border-left: 3px solid var(--red);
+  background: #fff; border-radius: 0 var(--radius) var(--radius) 0;
+  box-shadow: var(--shadow);
+}
+.product-includes h2 {
+  font-family: var(--font-heading); font-weight: 600; font-size: 18px;
+  color: var(--gray); margin: 0 0 10px;
+}
+.product-includes ul { margin: 0; padding-left: 1.15em; color: var(--gray); font-size: 15px; }
+.product-includes li { margin-bottom: 6px; }
+.product-includes li:last-child { margin-bottom: 0; }
+.product-note {
+  margin: 0 0 22px; padding: 12px 14px; font-size: 14px; color: var(--gray-light);
+  background: var(--bg-alt); border-radius: var(--radius); border: 1px dashed var(--border);
+}
+.product-note p { margin: 0; }
+.product-note strong { color: var(--gray); }
+
 .breadcrumb { font-size: 13px; color: var(--gray-light); margin-bottom: 20px; }
 .breadcrumb a { color: var(--gray-light); }
 .breadcrumb a:hover { color: var(--red); }
