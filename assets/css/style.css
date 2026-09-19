@@ -94,7 +94,11 @@ a:hover { color: var(--red-dark); }
   display: none; background: none; border: none; font-size: 26px; color: var(--gray); cursor: pointer;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1180px) {
+  .main-nav a { padding: 10px 10px; font-size: 13px; }
+  .main-nav .cta { margin-left: 4px; }
+}
+@media (max-width: 1024px) {
   .main-nav { display: none; flex-direction: column; align-items: stretch;
     position: absolute; top: 76px; left: 0; right: 0; background: #fff;
     border-bottom: 1px solid var(--border); padding: 8px; box-shadow: var(--shadow); }
@@ -118,8 +122,13 @@ a:hover { color: var(--red-dark); }
   color: #fff; padding: 60px 24px;
 }
 .hero h1 {
-  font-family: var(--font-display); font-size: 58px; margin: 0 0 8px;
+  font-family: var(--font-display); font-size: clamp(36px, 6vw, 56px); margin: 0 auto 12px;
+  line-height: 1.08; max-width: 14em;
   text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+.hero p.lead {
+  font-family: var(--font-body); font-size: 18px; line-height: 1.45;
+  margin: 0 auto 12px; max-width: 34em; opacity: 0.95;
 }
 .hero p.tagline { font-family: var(--font-sub); font-size: 22px; letter-spacing: 2px; margin: 0 0 10px; }
 .hero p.service-area { font-family: var(--font-body); font-size: 16px; margin: 0 0 28px; opacity: 0.95; }
@@ -149,6 +158,49 @@ p.section-sub {
   font-family: var(--font-sub); font-weight: 600; color: var(--red);
   text-align: center; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 40px;
 }
+p.section-intro {
+  font-family: var(--font-body); font-size: 17px; font-weight: 400;
+  color: var(--gray); text-align: center; text-transform: none; letter-spacing: 0;
+  max-width: 44em; margin: 0 auto 40px; line-height: 1.55;
+}
+
+/* Homepage promo offer */
+.promo-banner { padding: 28px 0 8px; }
+.promo-card {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px 24px; flex-wrap: wrap;
+  background: var(--bg-alt); border: 1px solid var(--border);
+  border-left: 5px solid var(--red); border-radius: var(--radius);
+  box-shadow: var(--shadow); padding: 20px 28px;
+}
+.promo-card .promo-offer {
+  font-family: var(--font-heading); font-size: 20px; font-weight: 600;
+  color: var(--gray); margin: 0; line-height: 1.35; flex: 1 1 280px;
+}
+.promo-card .promo-offer strong { color: var(--red); font-weight: 700; }
+
+/* Why Party Central */
+.why-pc { max-width: 820px; }
+.why-pc .section-title { text-align: left; font-size: 34px; margin-bottom: 16px; line-height: 1.2; }
+.why-pc .lead-line { font-size: 18px; margin: 0 0 16px; }
+.why-pc p { margin: 0 0 16px; }
+.why-pc .close-line {
+  font-family: var(--font-heading); font-weight: 600; font-size: 18px; margin: 0 0 24px;
+}
+
+/* Who We Serve chips */
+.who-we-serve { padding: 40px 0; text-align: center; }
+.who-we-serve .section-title { font-size: 28px; margin-bottom: 4px; }
+.serve-chips {
+  display: flex; flex-wrap: wrap; justify-content: center;
+  gap: 10px; list-style: none; padding: 0; margin: 18px 0 0;
+}
+.serve-chips a {
+  display: inline-block; padding: 8px 16px;
+  background: var(--bg-alt); border: 1px solid var(--border); border-radius: 999px;
+  font-family: var(--font-nav); font-weight: 600; font-size: 14px; color: var(--gray);
+}
+.serve-chips a:hover { border-color: var(--red); color: var(--red); background: #fff; }
 
 /* Offer grid (home) */
 .offer-grid {
