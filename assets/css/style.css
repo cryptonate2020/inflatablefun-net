@@ -181,7 +181,7 @@ p.section-intro {
 
 /* Why Party Central */
 .why-pc { max-width: 820px; }
-.why-pc .section-title { text-align: left; font-size: 34px; margin-bottom: 16px; }
+.why-pc .section-title { text-align: left; font-size: 34px; margin-bottom: 16px; line-height: 1.2; }
 .why-pc .lead-line { font-size: 18px; margin: 0 0 16px; }
 .why-pc p { margin: 0 0 16px; }
 .why-pc .close-line {
