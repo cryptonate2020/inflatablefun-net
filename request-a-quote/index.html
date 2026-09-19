@@ -10,6 +10,22 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Allan:wght@400;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/style.css">
+<style>
+  .form-card details {
+    margin: 8px 0 18px;
+    border: 1px solid #e8e8e8;
+    border-radius: 6px;
+    padding: 10px 14px;
+    background: #fafafa;
+  }
+  .form-card details summary {
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--gray, #444);
+  }
+  .form-card details[open] summary { margin-bottom: 12px; }
+</style>
 <script>
 document.addEventListener('DOMContentLoaded', function(){
   var params = new URLSearchParams(window.location.search);
@@ -44,6 +60,7 @@ document.addEventListener('DOMContentLoaded', function(){
 <section>
   <div class="container">
     <form class="form-card" action="https://formsubmit.co/partycentralofkentucky@yahoo.com" method="POST">
+
       <input type="hidden" name="_subject" value="New quote request - Party Central of Kentucky">
       <input type="hidden" name="_next" value="https://inflatablefun.net/thank-you.html">
       <input type="hidden" name="_autoresponse" value="Thanks for your quote request! Party Central of Kentucky will follow up shortly with availability and pricing.">
@@ -51,33 +68,22 @@ document.addEventListener('DOMContentLoaded', function(){
 
       <div class="form-grid-2">
         <div class="form-row"><label for="name">Name *</label><input type="text" id="name" name="Name" required></div>
-        <div class="form-row"><label for="date">Today's Date *</label><input type="date" id="date" name="Today's Date" required></div>
+        <div class="form-row"><label for="email">Email *</label><input type="email" id="email" name="Email Address" required></div>
       </div>
       <div class="form-grid-2">
-        <div class="form-row"><label for="company">Company / Organization</label><input type="text" id="company" name="Company / Organization"></div>
-        <div class="form-row"><label for="email">Email Address *</label><input type="email" id="email" name="Email Address" required></div>
+        <div class="form-row"><label for="phone">Phone *</label><input type="tel" id="phone" name="Phone Number" required></div>
+        <div class="form-row"><label for="event_date">Event Date *</label><input type="date" id="event_date" name="Event Date" required></div>
       </div>
-      <div class="form-grid-2">
-        <div class="form-row"><label for="phone">Phone Number *</label><input type="tel" id="phone" name="Phone Number" required></div>
-        <div class="form-row"><label for="address">Event Address *</label><input type="text" id="address" name="Event Address" required></div>
-      </div>
-      <div class="form-grid-2">
-        <div class="form-row"><label for="city">City *</label><input type="text" id="city" name="City" required></div>
-        <div class="form-row"><label for="state">State *</label><input type="text" id="state" name="State" required></div>
-      </div>
-      <div class="form-row" style="max-width:200px;"><label for="zip">Zipcode *</label><input type="text" id="zip" name="Zipcode" required></div>
+      <div class="form-row" style="max-width:280px;"><label for="start_time">Event Start Time</label><input type="time" id="start_time" name="Event Start Time"></div>
 
       <div class="form-grid-2">
-        <div class="form-row"><label for="start_date">Date of Event (Start) *</label><input type="date" id="start_date" name="Event Start Date" required></div>
-        <div class="form-row"><label for="end_date">Date of Event (End) *</label><input type="date" id="end_date" name="Event End Date" required></div>
+        <div class="form-row"><label for="city">Event City *</label><input type="text" id="city" name="City" required></div>
+        <div class="form-row"><label for="zip">ZIP *</label><input type="text" id="zip" name="Zipcode" required></div>
       </div>
-      <div class="form-grid-2">
-        <div class="form-row"><label for="start_time">Event Start Time *</label><input type="time" id="start_time" name="Event Start Time" required></div>
-        <div class="form-row"><label for="end_time">Event End Time *</label><input type="time" id="end_time" name="Event End Time" required></div>
-      </div>
+      <div class="form-row"><label for="address">Event Address</label><input type="text" id="address" name="Event Address" placeholder="Optional street address"></div>
 
       <fieldset>
-        <legend>Event Surface *</legend>
+        <legend>Surface *</legend>
         <div class="radio-row">
           <label><input type="radio" name="Event Surface" value="Grass - Allows Stakes" required> Grass &ndash; Allows Stakes</label>
           <label><input type="radio" name="Event Surface" value="Grass - No Stakes"> Grass &ndash; No Stakes</label>
@@ -86,62 +92,39 @@ document.addEventListener('DOMContentLoaded', function(){
         </div>
       </fieldset>
 
-      <div class="form-row">
-        <label for="desc">Description of Event &amp; Which Inflatable are you Interested in? *</label>
-        <textarea id="desc" name="Event Description" required></textarea>
-      </div>
-
       <fieldset>
-        <legend>Electric Outlets Available?</legend>
+        <legend>Delivery *</legend>
         <div class="radio-row">
-          <label><input type="radio" name="Electric Outlets" value="Yes"> Yes</label>
-          <label><input type="radio" name="Electric Outlets" value="No"> No</label>
-        </div>
-      </fieldset>
-
-      <fieldset>
-        <legend>On-site Help?</legend>
-        <div class="radio-row">
-          <label><input type="radio" name="On-site Help" value="Setup"> Setup</label>
-          <label><input type="radio" name="On-site Help" value="Pick-up"> Pick-up</label>
-          <label><input type="radio" name="On-site Help" value="Both"> Both</label>
-        </div>
-      </fieldset>
-
-      <fieldset>
-        <legend>Access</legend>
-        <div class="radio-row">
-          <label><input type="radio" name="Access" value="Drive up to"> Drive up to</label>
-          <label><input type="radio" name="Access" value="Dolly all the way"> Dolly all the way</label>
-        </div>
-      </fieldset>
-
-      <fieldset>
-        <legend>Monitors</legend>
-        <div class="radio-row">
-          <label><input type="radio" name="Monitors" value="Man each unit"> Man each unit</label>
-          <label><input type="radio" name="Monitors" value="Oversee"> Oversee</label>
+          <label><input type="radio" name="Type of Delivery" value="Inflatable Staff" required> Inflatable Staff</label>
+          <label><input type="radio" name="Type of Delivery" value="Delivery Setup/Removal"> Delivery Setup/Removal</label>
+          <label><input type="radio" name="Type of Delivery" value="Pickup"> Pickup</label>
         </div>
       </fieldset>
 
       <div class="form-row">
-        <label for="delivery">Type of Delivery</label>
-        <select id="delivery" name="Type of Delivery">
-          <option>Inflatable Staff</option>
-          <option>Delivery Setup/Removal</option>
-          <option>Pickup</option>
-        </select>
+        <label for="desc">What do you want to rent? *</label>
+        <textarea id="desc" name="Event Description" required placeholder="Interest + event type (birthday, school, festival, etc.)"></textarea>
       </div>
 
-      <fieldset>
-        <legend>Tax Exempt?</legend>
-        <div class="radio-row">
-          <label><input type="radio" name="Tax Exempt" value="Yes"> Yes</label>
-          <label><input type="radio" name="Tax Exempt" value="No"> No</label>
-        </div>
-      </fieldset>
+      <div class="form-row"><label for="comments">Anything else?</label><textarea id="comments" name="Additional Comments"></textarea></div>
 
-      <div class="form-row"><label for="comments">Additional Comments</label><textarea id="comments" name="Additional Comments"></textarea></div>
+      <details>
+        <summary>More details (optional)</summary>
+        <fieldset>
+          <legend>Electric Outlets Available?</legend>
+          <div class="radio-row">
+            <label><input type="radio" name="Electric Outlets" value="Yes"> Yes</label>
+            <label><input type="radio" name="Electric Outlets" value="No"> No</label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Tax Exempt?</legend>
+          <div class="radio-row">
+            <label><input type="radio" name="Tax Exempt" value="Yes"> Yes</label>
+            <label><input type="radio" name="Tax Exempt" value="No"> No</label>
+          </div>
+        </fieldset>
+      </details>
 
       <div class="form-submit"><button type="submit" class="btn btn-solid">Request Quote</button></div>
       <p class="form-note">Have questions instead? <a href="/contact/">Contact us</a>.</p>
