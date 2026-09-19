@@ -277,9 +277,46 @@ p.section-sub {
 .site-footer .social a { font-size: 13px; }
 
 /* Trust strip */
-.trust-strip { padding: 28px 0; text-align: center; background: #fff; border-top: 1px solid var(--border); }
-.trust-strip p { margin: 0; font-family: var(--font-sub); font-size: 16px; color: var(--gray); }
-.trust-strip a { font-weight: 600; }
+.trust-strip {
+  padding: 36px 0;
+  text-align: center;
+  background: var(--bg-alt);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.trust-strip--compact { padding: 28px 0; }
+.trust-strip-headline {
+  margin: 0 0 10px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--gray);
+  letter-spacing: 0.01em;
+}
+.trust-strip-line {
+  margin: 0 auto 20px;
+  max-width: 36em;
+  font-family: var(--font-sub);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--gray-light);
+}
+.trust-strip-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 14px 22px;
+}
+.trust-strip-secondary {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--red);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.trust-strip-secondary:hover { color: var(--red-darker); }
 
 
 /* Forms */
